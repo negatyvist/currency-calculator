@@ -1,0 +1,18 @@
+.container {
+    max-width: 450px;
+    margin: 25px auto;
+    padding: 5px;
+}
+
+.container__paragraph {
+    width: 100%;
+    margin-top: 25px;
+    box-shadow: 6px 8px 5px 0px rgba(28, 28, 28, 0.93);
+    border: 2px solid goldenrod;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
