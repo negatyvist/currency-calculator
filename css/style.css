@@ -8,6 +8,9 @@ html {
 
 .body {
     font-family: 'Lato', sans-serif;
-    background-color:rgb(42, 71, 73);
+    background-color: rgb(42, 71, 73);
     color: rgb(255, 255, 255);
+    background-image: url("https://image.freepik.com/free-photo/background-old-vintage-brick-wall_158595-6432.jpg");
+    background-size: cover;
+    background-position: center;
 }
