@@ -6,4 +6,5 @@
 It's a simple *'put in value, receive result'* form. It converts EUR (EU currency) into PLN (Polish currency) and backward. Remember to **correct** the actual exchange rate.
 ## Technologies included
 - BEM
+- CSS
 - Javascript ES6+ Features
