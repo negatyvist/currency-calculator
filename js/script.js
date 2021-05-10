@@ -1,23 +1,40 @@
-console.log("PLN/EUR exchange");
+{
+    const welcome = () => console.log("PLN/EUR exchange");
 
-let formElement = document.querySelector(".js-form");
-let ratioElement = document.querySelector(".js-form__ratioEur");
-let eurElement = document.querySelector(".js-form__amountEur");
-let plnElement = document.querySelector(".js-form__amountPln");
-let plnOptionElement = document.querySelector(".js-form__pln");
-let eurOptionElement = document.querySelector(".js-form__eur");
 
-formElement.addEventListener("input", () => {
+    const plnResult = (plnAmount) => {
+        const plnElement = document.querySelector(".js-form__amountPln");
 
-    let ratio = ratioElement.value;
-    let eur = eurElement.value;
+        plnElement.value = `${plnAmount.toFixed(2)}`;
+    }
 
-    let plnAmount = eur / ratio;
+    const eurResult = (eurAmount) => {
+        const eurOptionElement = document.querySelector(".js-form__eur");
 
-    plnElement.value = `${plnAmount.toFixed(2)}`;
+        eurOptionElement.value = `${eurAmount.toFixed(2)}`;
+    }
 
-    let pln = plnOptionElement.value;
-    let eurAmount = pln * ratio;
+    const exchange = () => {
+        const formElement = document.querySelector(".js-form");
 
-    eurOptionElement.value = `${eurAmount.toFixed(2)}`;
-});
+        formElement.addEventListener("input", () => {
+            const ratioElement = document.querySelector(".js-form__ratioEur");
+            const eurElement = document.querySelector(".js-form__amountEur");
+            const plnOptionElement = document.querySelector(".js-form__pln");
+
+            const ratio = ratioElement.value;
+            const eur = eurElement.value;
+
+            const plnAmount = eur / ratio;
+
+            const pln = plnOptionElement.value;
+            const eurAmount = pln * ratio;
+
+            eurResult(eurAmount);
+            plnResult(plnAmount);
+        });
+
+    }
+    welcome();
+    exchange();
+}
